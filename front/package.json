@@ -9,6 +9,12 @@
   "author": "eastZoo",
   "license": "MIT",
   "dependencies": {
-    "next": "^9.5.5"
+    "next": "^9.5.5",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react": "^7.32.2"
   }
 }

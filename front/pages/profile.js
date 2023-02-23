@@ -1,12 +1,12 @@
 import React from 'react'
 import AppLayout from '../components/AppLayout'
 
-const Home = () => {
+const profile = () => {
     return (
         <AppLayout>
-            Hello Next!!
+            Hello profile!!
         </AppLayout>
     )
 }
 
-export default Home
+export default profile

@@ -1,12 +1,11 @@
 import React from 'react'
 import AppLayout from '../components/AppLayout'
-
-const Home = () => {
+const signup = () => {
     return (
         <AppLayout>
-            Hello Next!!
+            Hello signup!!
         </AppLayout>
     )
 }
 
-export default Home
+export default signup
