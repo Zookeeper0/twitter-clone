@@ -1,18 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { Col, Input, Menu, Row } from 'antd';
-
-const dummy = {
-    nickname: '제로초',
-    Post: [],
-    Followings: [],
-    Followers: [],
-    isLoggedIn: false,
-};
+import LoginForm from './LoginForm';
+import UserProfile from './UserProfile';
 
 // pages에 있는 index, profile, signup 페이지가 공통적으로 사용할 레이아웃
 const AppLayout = ({ children }) => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
     return (
         <div>
             <Menu mode="horizontal">
@@ -26,7 +22,9 @@ const AppLayout = ({ children }) => {
             {/* gutter 컬럼 사이의 패딩 간격 */}
             <Row gutter={8}>
                 <Col xs={24} md={6}>
-
+                    {isLoggedIn
+                        ? <UserProfile setIsLoggedIn={setIsLoggedIn} />
+                        : <LoginForm setIsLoggedIn={setIsLoggedIn} />}
                 </Col>
                 <Col xs={24} md={12}>
                     {children}
